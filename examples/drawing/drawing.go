@@ -7,11 +7,10 @@ package main
 import (
 	"log"
 	"math"
-)
 
-import (
-	"github.com/lxn/walk"
-	. "github.com/lxn/walk/declarative"
+	"github.com/dearzhp/walk"
+
+	. "github.com/dearzhp/walk/declarative"
 )
 
 func main() {

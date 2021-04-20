@@ -7,7 +7,7 @@
 package declarative
 
 import (
-	"github.com/lxn/walk"
+	"github.com/dearzhp/walk"
 	"github.com/lxn/win"
 )
 
@@ -59,6 +59,8 @@ type TextEdit struct {
 	TextAlignment Alignment1D
 	TextColor     walk.Color
 	VScroll       bool
+	MultiLine     bool
+	Password      bool
 }
 
 func (te TextEdit) Create(builder *Builder) error {
@@ -68,6 +70,11 @@ func (te TextEdit) Create(builder *Builder) error {
 	}
 	if te.VScroll {
 		style |= win.WS_VSCROLL
+	}
+	if te.MultiLine {
+		style |= win.ES_MULTILINE
+	} else if te.Password {
+		style |= win.ES_PASSWORD
 	}
 
 	w, err := walk.NewTextEditWithStyle(builder.Parent(), style)

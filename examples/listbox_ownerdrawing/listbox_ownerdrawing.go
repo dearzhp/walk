@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lxn/walk"
-	. "github.com/lxn/walk/declarative"
+	"github.com/dearzhp/walk"
+	. "github.com/dearzhp/walk/declarative"
 	"github.com/lxn/win"
 )
 

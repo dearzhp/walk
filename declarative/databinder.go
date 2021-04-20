@@ -9,7 +9,7 @@ package declarative
 import (
 	"time"
 
-	"github.com/lxn/walk"
+	"github.com/dearzhp/walk"
 )
 
 type DataBinder struct {

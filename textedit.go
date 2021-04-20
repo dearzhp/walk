@@ -36,7 +36,7 @@ func NewTextEditWithStyle(parent Container, style uint32) (*TextEdit, error) {
 		te,
 		parent,
 		"EDIT",
-		win.WS_TABSTOP|win.WS_VISIBLE|win.ES_MULTILINE|win.ES_WANTRETURN|style,
+		win.WS_TABSTOP|win.WS_VISIBLE|win.ES_WANTRETURN|style,
 		win.WS_EX_CLIENTEDGE); err != nil {
 		return nil, err
 	}
