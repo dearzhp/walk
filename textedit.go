@@ -222,6 +222,10 @@ func (te *TextEdit) ScrollToCaret() {
 	te.SendMessage(win.EM_SCROLLCARET, 0, 0)
 }
 
+func (te *TextEdit) ScrollToBottom() {
+	te.SendMessage(win.WM_VSCROLL, win.SB_BOTTOM, 0)
+}
+
 func (te *TextEdit) TextSelection() (start, end int) {
 	te.SendMessage(win.EM_GETSEL, uintptr(unsafe.Pointer(&start)), uintptr(unsafe.Pointer(&end)))
 	return
